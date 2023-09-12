@@ -1,0 +1,1 @@
+lcc -debug -o tris.gb ./src/gameplay/game.c ./src/utils/common.c ./src/graphics/tris-board.c ./src/graphics/moving-icon.c ./src/graphics/X_symbol.c ./src/graphics/O_symbol.c ./src/graphics/tic-tac-toe.c ./src/graphics/press-start.c ./src/states/game_start.c ./src/states/game_end.c ./src/states/core_game_loop.c ./src/main.c
