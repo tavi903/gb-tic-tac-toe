@@ -2,3 +2,8 @@
 .vscode/launch.json
 .vscode/settings.json
 .vscode/tasks.json
+# remove compiled files
+tris.cdb
+tris.gb
+tris.map
+tris.noi
