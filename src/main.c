@@ -3,13 +3,16 @@
 #include "./../include/states/game_start.h"
 #include "./../include/states/core_game_loop.h"
 #include "./../include/states/game_end.h"
+#include <rand.h>
 
 struct _game currentGame;
 game_state previousState;
 
-void main() {
+void main(void) {
 
+    unsigned char *ptr_div_reg = (unsigned char*) 0xFF04;  // DIV Register
     gameStartSetup(&currentGame);
+    initrand((uint16_t) &ptr_div_reg); // Set Random Seed Generator
     
     while (TRUE) {
         (&currentGame)->previous_joypad = (&currentGame)->current_joypad != NULL ? (&currentGame)->current_joypad : (&currentGame)->previous_joypad;

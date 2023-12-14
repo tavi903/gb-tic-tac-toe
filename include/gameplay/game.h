@@ -23,4 +23,3 @@ typedef struct _game* game;
 
 void initEmptyBoard(game g);
 outcome checkIfSomeoneHasVictory(game g);
-bool allCellAreNotEmpty(cell_value x, cell_value y, cell_value z);

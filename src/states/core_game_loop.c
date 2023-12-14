@@ -16,7 +16,7 @@
 void elaboratePlayerAction(game g);
 void elaborateCpuAction(game g);
 void updatePlayerPosition(game g);
-void drawMovingIconSprite();
+void drawMovingIconSprite(void);
 void changeGameStateIfGameIsOver(game g);
 
 const uint8_t posX_in_px[3] = {12, 60, 110};
@@ -169,7 +169,7 @@ void updatePlayerPosition(game g) {
     g->current_joypad = NULL;
 }
 
-void drawMovingIconSprite() {
+void drawMovingIconSprite(void) {
     for (uint8_t i = 0; i < moving_icon_HEIGHT / 8; i++) {
         for (uint8_t j = 0; j < moving_icon_WIDTH / 8; j++) {
             move_sprite(moving_icon_sprite[i][j], posX_in_px[current_pos_x] + (j+1) * 8, posY_in_px[current_pos_y] + (i+1) * 8);
